@@ -1,3 +1,36 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.home-hero {
+  background: linear-gradient(
+                  rgba(20,20,20, .3), 
+                  rgba(20,20,20, .3)),
+                  url("main-reservoir.jpg");
+  background-size: cover;
+  color: #FFF;
+  text-shadow: 3px 3px 4px black; 
+  height: 80vh;
+}
+
+.home-hero > .container {
+  vertical-align: middle;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.home-hero > .container > .btn-lg {
+  margin-top: 20px;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+footer {
+  text-align: center;
+  font-size: 1.5rem;
+}
