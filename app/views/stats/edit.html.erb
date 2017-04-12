@@ -1,0 +1,11 @@
+<h1>Edit <%= @stat.reservoir.name.split.map(&:capitalize).join(' ') %> Reservoir</h1>
+
+<%= form_for @stat do |f| %>
+  <%= f.label :min %>
+  <%= f.text_field :min %><br />
+
+  <%= f.label :max %>
+  <%= f.text_field :max %><br />  
+
+  <%= f.submit %>
+<% end %>

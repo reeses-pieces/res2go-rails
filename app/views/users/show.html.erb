@@ -28,10 +28,10 @@
           <td><%= stat.min %></td>
           <td><%= stat.max %></td>
           <td>
-            <%= link_to "Edit", edit_reservoir_path, :class => "btn btn-info" %>
+            <%= link_to "Edit", edit_stat_path(stat), :class => "btn btn-info" %>
           </td>
           <td>
-            <%= link_to("Delete", reservoir_path, :class => "btn btn-danger", method: :delete) %>
+            <%= link_to("Delete", stat_path(stat), :class => "btn btn-danger", method: :delete) %>
           </td>
         </tr>
         <% end %>

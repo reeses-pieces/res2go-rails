@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 
   resources :users, :only => [:show]
 
-  resources :reservoirs
+  resources :reservoirs, :only => [:index]
+
+  resources :stats, :only => [:show, :edit, :update, :delete]
 end
