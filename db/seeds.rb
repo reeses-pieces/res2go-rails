@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+reservoirs = DataParser.generate_hashes(Reservoir.reservoir_url).map { |reservoir_hash| Reservoir.create!(reservoir_hash) }
