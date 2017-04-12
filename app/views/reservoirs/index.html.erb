@@ -1,1 +1,30 @@
-<h1>All Reservoirs</h1>
+
+
+<div class="col-md-6 reservoir-container well">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">All Reservoirs</div>
+
+    <!-- Table -->
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Storage(AF)</th>
+        <th>Capacity(AF)</th>
+        <th>% Capacity</th>
+      </tr>
+    <% @reservoirs.each do |reservoir| %>
+
+      <article id=<% reservoir.id %>>
+        <tr>
+          <td><%= reservoir.name %></td>
+          <td><%= reservoir.storage %></td>
+          <td><%= reservoir.capacity %></td>
+          <td><%= reservoir.percent_capacity %></td>
+        </tr>
+
+        <% end %>
+      </article>
+    </table>
+  </div>
+</div>

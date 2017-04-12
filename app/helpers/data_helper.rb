@@ -63,7 +63,7 @@ module DataHelper
 
 end
 
-# result = DataParser.generate_hashes(RESERVOIR_PAGE)
+# result = DataHelper.generate_hashes(RESERVOIR_PAGE)
 
 # Pry.start(binding)
 
