@@ -1,0 +1,18 @@
+.login-hero {
+  background: linear-gradient(
+                  rgba(20,20,20, .3), 
+                  rgba(20,20,20, .3)),
+                  url("lake.jpg") center center no-repeat;
+  background-size: cover;
+  height: 80vh
+}
+
+.login-hero .well {
+  background: rgba(255, 255, 255, 0.9)
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}

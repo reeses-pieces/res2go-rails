@@ -6,7 +6,7 @@
     </div>
 
     <!-- Table -->
-    <table class="table table-striped">
+    <table class="table table-striped reservoir-table">
       <tr>
         <th>Name</th>
         <th>Storage(AF)</th>
@@ -15,16 +15,23 @@
       </tr>
     <% @reservoirs.each do |reservoir| %>
 
-      <article id=<% reservoir.id %>>
-        <tr>
+        <tr class="reservoir-row">
           <td><%= reservoir.name %></td>
           <td><%= reservoir.storage %></td>
           <td><%= reservoir.capacity %></td>
-          <td><%= reservoir.percent_capacity %></td>
+          <td>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="<%= reservoir.percent_capacity %>"
+              aria-valuemin="0" aria-valuemax="100" style="width:<%= reservoir.percent_capacity %>%">
+                <span class="sr-only">70% Complete</span>
+              </div>
+            </div>
+          </td>
         </tr>
 
         <% end %>
-      </article>
     </table>
   </div>
 </div>
+
+
