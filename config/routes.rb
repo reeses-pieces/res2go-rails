@@ -9,5 +9,5 @@ Rails.application.routes.draw do
 
   resources :reservoirs, :only => [:index]
 
-  resources :stats, :only => [:show, :edit, :update, :delete]
+  resources :stats, :except => [:index]
 end
