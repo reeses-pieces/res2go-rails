@@ -2,6 +2,8 @@ class Reservoir < ApplicationRecord
 
   has_many :stats
   has_many :users, through: :stats
+
+  validates :name, presence: true
   
   def self.reservoir_url
     "http://cdec.water.ca.gov/cgi-progs/reservoirs?s=RES"

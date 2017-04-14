@@ -15,7 +15,7 @@ class StatsController < ApplicationController
     if @stat.save
       redirect_to user_path(current_user)
     else
-      redirect_to new_stat_path(@stat)
+      flash[:error] = @stat.errors.full_messages.to_sentence
     end
   end
 
