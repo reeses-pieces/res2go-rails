@@ -26,3 +26,6 @@ module Res2go
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+#CUSTOM
+config.serve_static_assets = true
