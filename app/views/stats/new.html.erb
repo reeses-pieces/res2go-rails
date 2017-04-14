@@ -1,4 +1,4 @@
-<div class="new-stat-container container">
+<div class="stat-container container">
   <div class="row">
     <div class="col-md-4 col-md-offset-2">
       <h1>New Reservoir</h1>
@@ -10,6 +10,18 @@
     <div class="col-md-4 well">
       <form class="form" action="/stats" method="POST">
         <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %> 
+        
+        <% if @stat.errors.any? %>
+            <h2>Errors</h2>
+            <ul>
+              <% @stat.errors.full_messages.each do |error| %>
+              <li>
+                <%= error %>
+              <% end %>
+              </li>
+            </ul>
+        <% end %>
+
         <div class="form-group">
           <select class="form-control" name="reservoir_name">
             <!-- If reservoir isn't already in the user's reservoirs, list it -->
@@ -37,11 +49,6 @@
 
       </form>
 
-    <% if @errors %>
-      <% @errors.each do |error| %>
-        <%= error.full_messages %>
-      <% end %>
-    <% end %>
     </div>
   </div>
 </div>

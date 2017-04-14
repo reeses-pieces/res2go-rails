@@ -3,7 +3,9 @@ class Stat < ApplicationRecord
   belongs_to :user
   belongs_to :reservoir
 
-  validates :min, :max, numericality: true
-  validates :min, :max, numericality: {greater_than_or_equal_to: 0}
-  validates :min, :max, numericality: {less_than_or_equal_to: 100}
+  # validates :reservoir, presence: true
+  # validates_numericality_of :min, :greater_than => 0, :less_than => 100, :message => "Must be between 1 and 99"
+  # validates_numericality_of :max, :greater_than => 0, :less_than => 100, :message => "Must be between 1 and 99"
+
+  # validates :min, :max, numericality: true
 end

@@ -12,10 +12,15 @@ class StatsController < ApplicationController
                      reservoir_id: @reservoir.id,
                      min: params["min"],
                      max: params["max"])
-    if @stat.save
-      redirect_to user_path(current_user)
-    else
-      flash[:error] = @stat.errors.full_messages.to_sentence
+
+    respond_to do |format|
+      if @stat.save
+        format.html { redirect_to user_path(current_user) }
+      else
+        @user = current_user
+        @reservoirs = Reservoir.all
+        format.html { render :new }
+      end
     end
   end
 
