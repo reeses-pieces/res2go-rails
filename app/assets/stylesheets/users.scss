@@ -2,4 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+.user-hero {
+  background: linear-gradient(
+                  rgba(20,20,20, .3), 
+                  rgba(20,20,20, .3)),
+                  url("user-show.jpg") center center no-repeat;
+  background-size: cover;
+  height: 80vh
+}
