@@ -1,11 +1,15 @@
-<h1>Edit <%= @stat.reservoir.name.split.map(&:capitalize).join(' ') %> Reservoir</h1>
+<div class="container stat-container">
+  <div class="col-sm-4 col-sm-offset-4 well">
+    <h3>Edit <%= @stat.reservoir.name.split.map(&:capitalize).join(' ') %> Reservoir</h3>
 
-<%= form_for @stat do |f| %>
-  <%= f.label :min %>
-  <%= f.text_field :min %><br />
+    <%= form_for @stat, html: {class: "form-group"} do |f| %>
+      <%= f.label :min %>
+      <%= f.text_field :min, class: "form-control" %><br />
 
-  <%= f.label :max %>
-  <%= f.text_field :max %><br />  
+      <%= f.label :max %>
+      <%= f.text_field :max, class: "form-control" %><br />  
 
-  <%= f.submit %>
-<% end %>
+      <%= f.submit class: "btn btn-primary" %>
+    <% end %>  
+  </div>
+</div>  
