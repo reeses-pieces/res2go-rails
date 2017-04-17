@@ -1,24 +1,8 @@
-# README
+# Reservoirs To Go
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This web app allows users to track any California reservoir's water level. If the reservoir level falls below the minimum threshold or rises above the maximum threshold set by the user, a notification can be sent to them.
 
-Things you may want to cover:
+Deployed at: http://res2go.herokuapp.com/
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![home](public/screenshots/home.png?raw=true "home")
+![show](public/screenshots/user-show.png?raw=true "show")
