@@ -25,7 +25,7 @@
         <div class="form-group">
           <select class="form-control" name="reservoir_name">
             <!-- If reservoir isn't already in the user's reservoirs, list it -->
-            <option selected disabled>Select reservoir</option>
+            <!-- <option selected disabled>Select reservoir</option> -->
             <% @reservoirs.each do |reservoir| %>
               <% if !@user.reservoirs.include?(reservoir) %>
                 <option value="<%= reservoir.name %>"><%= reservoir.name %></option>
